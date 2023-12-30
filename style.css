@@ -27,7 +27,7 @@ header{
 .logo{
     color:#c2c5c9; 
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2em;
     text-decoration: none;
     
 }
@@ -44,7 +44,7 @@ header{
     list-style: none;
 }
 .navbar a{
-    font-size: 1.2em;
+    font-size: 1em;
     color: #b6a5a5;
     text-decoration: none;
     margin-left: 30px;
@@ -53,14 +53,14 @@ header{
 .btn-reserve{
     font-size: 0.6em;
     padding: 5px 5px;
-    background: #0d6cc5;
+    background: #4d0dc5;
     margin-top: -10px;
     text-transform: uppercase;
     border-radius: 15px;
 }
 .btn-reserve:hover{
-    background: #4427ec;
-    transition: ease-out;   
+    background: #a427ec;
+    transition: ease-out;  
 }
 header .navbar li a:hover{
     color: #1ac6fa;
@@ -179,18 +179,19 @@ section{
 }
 
 .menu .contenu{
-    display: flex;
+    display:flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     margin-top: 40px;
 }
 
 .menu .contenu .box{  
     width: 350px;
-    margin-top: 20px;
+    margin: 20px;
     border: 20px solid #fff;
     box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
     border-radius: 50px;
+    
 } 
 
 .menu .contenu .box .imbox{
@@ -318,22 +319,30 @@ margin-top: 40px;
 }
 
 .contact{
-    background-image: url(img/experts/pexels-terje-sollie-313700.jpg);
+    background-image: url(img/experts/4.jpg);
     background-size: cover;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
     width: 100%;
-    background-position: unset;
+    background-position:100%;
+}
+.contact h2 {
+    color:#554f4f;
+}
+.contact p{
+    color: #c4bdbd;
+   font-size: 1.3rem;
 }
 
 .contactform{
     padding: 75px 50px;
-    background: #fff;
+    background: #f3e9e9;
     box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.8);
     max-width: 500px;
     margin-top: 50px;
     justify-content: center;
     align-items: center;
     margin-left: 29%;
+    border-radius: 20px;
 }
 
 .contactform .inputboite{
@@ -343,9 +352,10 @@ margin-top: 40px;
 }
 
 .contactform h3{
-color: #111;
-font-size: 1em;
+color: #2c2929;
+font-size: 1.2em;
 margin-bottom: 20px;
+text-align: center;
 }
 
 .contactform .inputboite input,
@@ -388,42 +398,241 @@ margin-bottom: 20px;
 }
 
 .horaire{
-    background-color:#ccc6c6  
+    background-image:url(img/experts/15.jpg);
+    background-size: cover;
+}
+.horaire .texte  h2 {
+    font-size: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .horaire .infohours h3{
     font-size: 1.5em;
-    color:rgb(32, 26, 9);
+    color:rgb(131, 73, 19);
     display: flex;
     justify-content: center;
     align-items:center;
     
 }
 .jour{
-    color: rgb(48, 41, 25);
+    color: rgb(153, 94, 5);
     display:flex;
     justify-content:center;
     align-items:center;
     margin-top: 2px;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 300;
     padding: 5px;
     letter-spacing: 2px;
     flex-direction: column;
     position: relative;
     
+    
 
+}
+.image{
+    display:flex;
+    justify-content:center;
+    position: relative;    
+}
+
+.image img{
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+    
+}
+.google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 50px;
+    
+} 
+
+.google map{
+    width: max-content;
+    max-height: max-content;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 header.sticky{
-    background: #fff;
+    background:#fff;
     padding: 10px 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
+header.sticky .logo{
+    color: #857979;
+}
+header.sticky .navbar li a{
+    color: #0a0a0a;
+}
+header.sticky li a:hover{
+    color: #2099e9;
+    border-bottom: 2px solid #fb911f;
+}
 
 
+@media (max-width: 991px){
+   header,
+   header.sticky{
+    padding: 10px 20px;
+   } 
+
+   header .navbar li{
+    margin-left: 0px;
+   }
+
+   header .navbar li a{
+    text-decoration:none;
+    color: #111;
+    font-size: 1.2em;
+    font-weight: 300;
+   }
+   .btn-reserve{
+    margin-top: 10px;
+   }
+   
+   
+   .navbar{
+    display: none ;
+   }
+
+   section{
+    padding: 20px;
+   }
+
+   header .navbar.active{
+    width: 100%;
+    height: calc(100% -68%);
+    position: fixed;
+    top: 68px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    align-items: center;
+   }
 
 
+   .menutoggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(bg-img/menu-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+    
+   } 
+
+   .menutoggle.active{
+    background-image: url(./bg-img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+   }
+
+   header.sticky .menutoggle{
+    filter: invert(1);
+   }
 
 
+   .banniere .contenu h2{
+    font-size: 1.2em;
+   }
+  
+   .row .col50 img{
+    margin-left: 18%;
+   }
 
+
+   .contenu p:nth-child(2){
+    font-size: 1.2em;
+   } 
+
+
+   .expert{
+    margin-top: 0px;
+   }
+
+
+   .menu{
+    margin-top: 0px;
+   }
+
+
+   .row{
+    display: flex;
+    flex-direction: column;
+   }
+
+
+   .temoignage h2{
+    font-size: 2em;
+    text-align: center;
+   }
+
+
+   .temoignage p{
+    text-align: center;
+    
+   }
+
+   .contactform{
+    margin-left: 25%;
+   }
+    
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+
+    .row{
+        flex-direction: column;
+    }
+
+}
+
+
+@media(max-width: 480px){
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+   
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+
+    .temoignage h2{
+        font-size: 1.1em;
+    }
+
+
+    .temoignage p{
+        text-align: center;
+    }
+}
